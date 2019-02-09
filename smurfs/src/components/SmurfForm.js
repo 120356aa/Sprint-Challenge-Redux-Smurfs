@@ -27,39 +27,37 @@ class SmurfForm extends React.Component {
   render(){
     return(
       <form onSubmit={this.submitHandler}>
-          <input
-              type='text'
-              name='name'
-              placeholder='Name'
-              onChange={this.handleChange}
-              value={this.state.name}
-            />
+        <input
+          type='text'
+          name='name'
+          placeholder='Name'
+          onChange={this.handleChange}
+          value={this.state.name}
+        />
 
-            <input
-              type='text'
-              name='age'
-              placeholder='Age'
-              onChange={this.handleChange}
-              value={this.state.age}
-            />
+        <input
+          type='text'
+          name='age'
+          placeholder='Age'
+          onChange={this.handleChange}
+          value={this.state.age}
+        />
 
-            <input
-              type='text'
-              name='height'
-              placeholder='Height'
-              onChange={this.handleChange}
-              value={this.state.height}
-            />
-          <button type='submit'>Add Smurf</button>
+        <input
+          type='text'
+          name='height'
+          placeholder='Height'
+          onChange={this.handleChange}
+          value={this.state.height}
+        />
+        <button type='submit'>Add Smurf</button>
       </form>
     )
   }
 };
 
 const mapStateToProps = state => {
-  return{
-    addSmurf: state.addSmurf
-  }
+  return{ addSmurf: state.addSmurf }
 }
 
 export default connect(mapStateToProps, { addSmurf })(SmurfForm)
