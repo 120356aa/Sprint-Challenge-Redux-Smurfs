@@ -1,1 +1,1 @@
-export { default as SmurfsListView } from "./smurfslistview";
+export { default as SmurfListView } from "./SmurfListView";
